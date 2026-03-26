@@ -1,4 +1,5 @@
 import random
+from exepciones.pranoiaerror import ParanoiaError
 class Paranoia:
     def __init__(self, prompt: str):
         self.prompt = prompt
@@ -11,4 +12,11 @@ class Paranoia:
     "puede que sí, puede que no, pero lo más seguro es que quién sabe xD",
     "simón, al rato..."
         ]
+        
+        if self.prompt == "tonta":
+            raise ParanoiaError("No hables de eso")
+        
+        elif self.prompt == "matar":
+            raise ParanoiaError("Sin matar a nadie")
+        
         return random.choice(respuesta)
