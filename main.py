@@ -2,7 +2,7 @@ from entidades.paranoia import Paranoia
 from exepciones.pranoiaerror import ParanoiaError
 from colorama import Fore
 try:
-    print("Puedes hacerle una pregunta a Paranoia.")
+    print(f"{Fore.BLUE}Puedes hacerle una pregunta a Paranoia.")
     prompt = input()
     paranoia = Paranoia(prompt)
 
